@@ -7,7 +7,6 @@ export const openCamera = callback => {
     compressImageQuality: 0.5,
   })
     .then(image => {
-      console.log(image);
       callback({image});
     })
     .catch(error => {
@@ -22,8 +21,6 @@ export const openPicker = callback => {
     compressImageQuality: 0.5,
   })
     .then(image => {
-      console.log(image);
-
       callback({image});
     })
     .catch(error => {
