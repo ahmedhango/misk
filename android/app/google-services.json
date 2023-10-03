@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "157648006171",
+    "firebase_url": "https://fir-storge.firebaseio.com",
+    "project_id": "fir-storge",
+    "storage_bucket": "fir-storge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157648006171:android:7dc622a7efcb3a5a0e1cbe",
+        "android_client_info": {
+          "package_name": "misk.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157648006171-vo9tl0nlbmp6qmbcqa9dff0ngonih55m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9ic4BvJ5PkCzG8UTnHXvn-U7N8dhdPbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157648006171-vo9tl0nlbmp6qmbcqa9dff0ngonih55m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
