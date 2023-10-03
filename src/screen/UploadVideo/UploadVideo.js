@@ -6,35 +6,21 @@
  */
 
 import React, {useRef, useState} from 'react';
-import {Alert, SafeAreaView, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
+import {index} from './index';
 import Button from '../../component/Button';
 import SelectRBSheet from '../../component/SelectRBSheet';
-import {openCamera, openPicker} from '../../utils/ImageCropPicker';
 
 import {styles} from './style';
 
 const UploadVideo = () => {
-  const refOpenCamera = useRef();
-  const [imageSelected, setImageSelected] = useState('');
+  const {
+    refOpenCamera,
+    openBS,
+    onConfirmOpenCameraType,
 
-  const onConfirmOpenCameraType = index => {
-    if (index == 1) {
-      openPicker(res => {
-        if (res) {
-          setImageSelected(res.image.path);
-        }
-        refOpenCamera.current.close();
-      });
-    } else {
-      openCamera(res => {
-        if (res) {
-          setImageSelected(res.image.path);
-        }
-        refOpenCamera.current.close();
-      });
-    }
-  };
-
+    imageSelected,
+  } = index();
   const renderOpenCameraAndPhotos = (item, index) => {
     return (
       <View style={styles.item}>
@@ -65,11 +51,7 @@ const UploadVideo = () => {
   return (
     <View style={styles.container}>
       {renderOpenCamera()}
-      <Button
-        onPress={() => refOpenCamera.current.open()}
-        btnStyle={styles.btn}
-        text="Upload Video"
-      />
+      <Button onPress={openBS} btnStyle={styles.btn} text="Upload sdVideo" />
     </View>
   );
 };
